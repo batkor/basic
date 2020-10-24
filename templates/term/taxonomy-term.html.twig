@@ -12,7 +12,7 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if name and not page %}
-    <h2><a href="{{ url }}">{{ name }}</a></h2>
+    <h2 {{ title_attributes.addClass(term.bundle|clean_class ~ '_name') }}><a href="{{ url }}">{{ name }}</a></h2>
   {% endif %}
   {{ title_suffix }}
   {{ content }}

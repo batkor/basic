@@ -1,6 +1,6 @@
 {#
 /**
- * @see core/themes/stable/templates/content/node.html.twig
+ * @see core/modules/node/templates/node.html.twig
  */
 #}
 {%
@@ -14,7 +14,7 @@
 
   {{ title_prefix }}
   {% if label and not page %}
-    <h2{{ title_attributes.addClass('label') }}>
+    <h2{{ title_attributes.addClass(node.bundle|clean_class ~ '_title') }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
     </h2>
   {% endif %}
