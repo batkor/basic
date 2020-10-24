@@ -1,17 +1,23 @@
 {
-  "name": "batkor/basic",
-  "description": "This base theme.",
-  "type": "drupal-theme",
-  "keywords": ["drupal", "drupal-theme"],
-  "homepage": "https://gitlab.com/batkor-themes/basic",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "batkor",
-      "email": "info@batkor.ru"
+    "name": "batkor/basic",
+    "description": "This base theme.",
+    "type": "drupal-custom-theme",
+    "keywords": [
+        "drupal",
+        "drupal-theme"
+    ],
+    "homepage": "https://gitlab.com/batkor-themes/basic",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "batkor",
+            "email": "info@batkor.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.3"
+    },
+    "scripts": {
+        "post-install-cmd": ["rm -rf ./.git"]
     }
-  ],
-  "require": {
-    "php": ">=7.3"
-  }
 }
