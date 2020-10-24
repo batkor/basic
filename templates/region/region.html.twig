@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% if content %}
+  {% set region_class = 'region_' ~ region %}
+  {% if region == 'content' %}
+    <main role="main" {{ attributes.addClass(region_class) }}>
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      <div class="{{ region_class ~ '_inner' }}">{{ content }}</div>
+    </main>
+  {% else %}
+    <div{{ attributes.addClass(region_class) }}>
+      <div class="{{ region_class ~ '_inner' }}">{{ content }}</div>
+    </div>
+  {% endif %}
+{% endif %}

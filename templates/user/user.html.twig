@@ -1,0 +1,11 @@
+{#
+/**
+ * @see core/themes/stable/templates/user/user.html.twig
+ */
+#}
+
+<article{{ attributes.addClass('user', 'user__' ~ view_mode|clean_class) }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>

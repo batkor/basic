@@ -1,0 +1,42 @@
+.local_tasks {
+  position: fixed;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  top: 50%;
+  background-color: #f8f8f8;
+  z-index: 999;
+  padding: 8px;
+  border: 1px solid #e1e1e1;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
+  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in; }
+
+.local_tasks.show {
+  -webkit-transform: translateX(0);
+  transform: translateX(0); }
+
+.local_tasks ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0; }
+
+.local_tasks li {
+  line-height: 1.5; }
+
+.local_tasks_submit {
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z' /%3E%3C/svg%3E");
+  background-color: #f8f8f8;
+  padding: 4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  cursor: pointer; }
+
+/*# sourceMappingURL=../maps/components/local_tasks.css.map */

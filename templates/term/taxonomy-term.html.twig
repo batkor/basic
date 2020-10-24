@@ -1,0 +1,19 @@
+{#
+/**
+ * @see core/modules/taxonomy/templates/taxonomy-term.html.twig
+ */
+#}
+{%
+  set classes = [
+  term.bundle|clean_class,
+  view_mode ? term.bundle|clean_class ~ '_' ~ view_mode|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if name and not page %}
+    <h2><a href="{{ url }}">{{ name }}</a></h2>
+  {% endif %}
+  {{ title_suffix }}
+  {{ content }}
+</div>

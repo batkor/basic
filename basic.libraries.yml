@@ -1,0 +1,14 @@
+# Global library.
+global:
+  css:
+    base:
+      assets/css/global.css: {}
+  dependencies:
+    - core/normalize
+
+block.local_tasks:
+  css:
+    component:
+      assets/css/components/local_tasks.css: {}
+  js:
+    assets/js/local_tasks.js: {}

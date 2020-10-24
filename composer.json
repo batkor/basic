@@ -1,0 +1,17 @@
+{
+  "name": "batkor/basic",
+  "description": "This base theme.",
+  "type": "drupal-theme",
+  "keywords": ["drupal", "drupal-theme"],
+  "homepage": "https://gitlab.com/batkor-themes/basic",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "batkor",
+      "email": "info@batkor.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.3"
+  }
+}
