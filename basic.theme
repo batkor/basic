@@ -11,21 +11,12 @@
 function basic_preprocess_block(array &$variables): void {
 
   switch ($variables['elements']['#base_plugin_id']) {
-    case 'block_content':
-      // Add block id to class name.
-      $variables['attributes']['class'][] = "bc-{$variables['elements']['content']['#block_content']->id()}";
-      break;
-
     case 'local_tasks_block':
       $variables['attributes']['class'][] = 'local_tasks';
       $variables['#attached']['library'][] = 'basic/block.local_tasks';
       break;
   }
   $variables['attributes']['class'][] = 'block';
-  if (isset($variables['elements']['#id'])) {
-    $variables['attributes']['class'][] = $variables['elements']['#id'];
-  }
-
   $variables['title_attributes']['class'][] = 'block_title';
   $variables['content_attributes']['class'][] = 'block_content';
 }

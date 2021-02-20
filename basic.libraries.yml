@@ -2,7 +2,9 @@
 global:
   css:
     base:
-      assets/css/global.css: {}
+      assets/css/vars.css: {}
+  js:
+    assets/js/global.js: { }
   dependencies:
     - core/normalize
 

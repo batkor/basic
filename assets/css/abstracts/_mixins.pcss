@@ -1,4 +1,4 @@
-@mixin visually-hidden {
+@define-mixin visually-hidden {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
   height: 1px !important;
@@ -21,18 +21,18 @@
   }
 }
 
-@mixin list-unstyle {
+@define-mixin list-unstyle {
   list-style: none;
   padding-left: 0;
 }
 
-@mixin container {
+@define-mixin container {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
 }
 
-@mixin full_width {
+@define-mixin full_width {
   width: 100vw;
   position: relative;
   left: 50%;
@@ -41,13 +41,13 @@
   margin-right: -50vw;
 }
 
-@mixin respond-to($breakpoint) {
+@define-mixin respond-to $breakpoint {
   @media (max-width: $breakpoint) {
-    @content;
+    @mixin-content;
   }
 }
-@mixin respond-from($breakpoint) {
+@define-mixin respond-from $breakpoint {
   @media (min-width: $breakpoint) {
-    @content;
+    @mixin-content;
   }
 }

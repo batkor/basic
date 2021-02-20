@@ -1,29 +1,41 @@
 {
-  "name": "basic",
-  "description": "",
+  "name": "@batkor/basic",
+  "description": "Provides compiler for es6 to es5 and postcss to css",
   "private": true,
   "keywords": [],
   "author": "batkor",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/batkor/basic.git"
+    "url": "https://github.com/batkor/basic/blob/master/"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/batkor/basic/issues"
+    "url": "https://github.com/batkor/basic/issues"
   },
-  "homepage": "https://gitlab.com/batkor/basic#readme",
+  "homepage": "https://github.com/batkor/basic/blob/master/",
+  "main": "rollup.config.js",
+  "scripts": {
+    "theme:build": "gulp",
+    "theme:prod": "gulp compileAll --prod",
+    "theme:css": "gulp compileCSS",
+    "theme:js": "gulp compileJS"
+  },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "autoprefixer": "^10.2.4",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-sourcemaps": "^2.6.5"
+    "postcss": "^8.2.6",
+    "postcss-header": "^3.0.1",
+    "postcss-import": "^14.0.0",
+    "postcss-mixins": "^7.0.3",
+    "postcss-nested": "^5.0.3",
+    "rollup": "^2.39.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
