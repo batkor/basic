@@ -2,11 +2,17 @@
 global:
   css:
     base:
-      assets/css/vars.css: {}
+      assets/css/global.css: {}
   js:
     assets/js/global.js: { }
   dependencies:
     - core/normalize
+    - basic/vars
+
+vars:
+  css:
+    base:
+      assets/css/vars.css: { }
 
 block.local_tasks:
   css:
