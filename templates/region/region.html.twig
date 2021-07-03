@@ -16,7 +16,6 @@
   {% set region_class = 'region_' ~ region %}
   {% if region == 'content' %}
     <main role="main" {{ attributes.addClass(region_class) }}>
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       <div class="{{ region_class ~ '_inner' }}">{{ content }}</div>
     </main>
   {% else %}
