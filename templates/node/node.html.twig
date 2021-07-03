@@ -9,7 +9,7 @@
     view_mode ? node.bundle|clean_class ~ '_' ~ view_mode|clean_class,
   ]
 %}
-{% spaceless %}
+{% apply spaceless %}
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
@@ -35,4 +35,4 @@
   </div>
 
 </article>
-{% endspaceless %}
+{% endapply %}
